@@ -17,27 +17,125 @@
 		<ol>
 
 			<li> **`let`**: Declares a block-scoped, local variable, optionally initializing it to a value.</li>
-				```javascript
-				<pre><code>
-				let name = "John";
-				let age;
-				age = 25;
-			  </code></pre>
-				```
+			<!--How to use let keyword-->
+			<p>let</p>
+			<p>Use let when you need a variable that can be reassigned and you want it to be limited to the scope of a block or loop.</p>
+	 <p>It helps avoid issues related to variable hoisting and unintentional global variables.</p>
+	 <pre>
+		<code>
+			// Declare a variable using let
+let message = "Hello, world!";
+
+// Print the variable
+console.log(message); // Output: Hello, world!
+
+// Change the value of the variable
+message = "JavaScript is awesome!";
+console.log(message); // Output: JavaScript is awesome!
+
+// Block scope example
+if (true) {
+    let blockScoped = "I'm only accessible within this block";
+    console.log(blockScoped); // Output: I'm only accessible within this block
+}
+
+// Trying to access blockScoped outside the block will cause an error
+// console.log(blockScoped); // Uncaught ReferenceError: blockScoped is not defined
+
+// For loop example
+for (let i = 0; i < 3; i++) {
+    console.log(i); // Output: 0, 1, 2
+}
+
+// Trying to access i outside the loop will cause an error
+// console.log(i); // Uncaught ReferenceError: i is not defined
+
+
+		</code>
+			
 		
 		  <li> **`const`**: Declares a block-scoped, read-only (constant) variable. It must be initialized at the time of declaration.</li>
-				```javascript
-				<pre><code>
-				const pi = 3.14159;
-			  </code></pre>
-				```
+			<!--How is Const keyword is used-->
+      <p>const</p>
+	 <p>Key Points about const
+		<ul>
+			<li>Block Scope:
+		  <p>Similar to let, variables declared with const are block-scoped. <br>
+			  They are limited to the block, statement, or expression in which they are used.
+
+			</p>
+		  </li>
+			<li>No Reassignment:
+				<p>Variables declared with const cannot be reassigned. <br>
+					 Once a value is assigned to a const variable, it cannot be changed.
+	
+				</p>
+			</li>
+			<li>Immutable Variable Reference:
+				<p>
+					While you cannot change the reference of a const variable, the content of objects or arrays declared with const can still be modified.
+				</p>
+			</li>
+		</ul>
+	 </p>
+	 <pre>
+		<code>
+			// Declare a constant variable
+const message = "Hello, world!";
+
+// Attempting to reassign a const variable will cause an error
+// message = "New message"; // Uncaught TypeError: Assignment to constant variable.
+
+// Block scope example
+if (true) {
+    const blockScoped = "I'm only accessible within this block";
+    console.log(blockScoped); // Output: I'm only accessible within this block
+}
+
+// Trying to access blockScoped outside the block will cause an error
+// console.log(blockScoped); // Uncaught ReferenceError: blockScoped is not defined
+
+// Using const with objects
+const person = {
+    name: "Alice",
+    age: 25
+};
+
+// You can modify the properties of the object
+person.name = "Bob";
+console.log(person); // Output: { name: "Bob", age: 25 }
+
+// But you cannot reassign the entire object
+// person = { name: "Charlie", age: 30 }; // Uncaught TypeError: Assignment to constant variable.
+
+// Using const with arrays
+const numbers = [1, 2, 3];
+
+// You can modify the contents of the array
+numbers.push(4);
+console.log(numbers); // Output: [1, 2, 3, 4]
+
+// But you cannot reassign the entire array
+// numbers = [5, 6, 7]; // Uncaught TypeError: Assignment to constant variable.
+
+		</code>
+	 </pre>
+	 <p>When to Use const:</p>
+	 <ul>
+		<li>
+			<p>
+        Use const for variables that should not change once assigned. <br> It helps enforce immutability and makes the code more predictable.
+			</p>
+			<p>
+        It's a good practice to use const by default, and only switch to let if you know the variable's value will need to change.
+			</p>
+
+		</li>
+	 </ul>
 		
 			<li> **`var`**: Declares a function-scoped or globally-scoped variable, depending on the context. It's the older way of declaring variables and is generally avoided in modern JavaScript due to its quirks.</li>
-				```javascript
-				<pre><code>
-				var isStudent = true;
-			  </code></pre>
-				```
+			<p>var</p>	
+			<!--How is Var keyword is used-->
 		</ol>
 			<li>### Initialization</li>
 		Variables can be initialized with values at the time of declaration or later in the code.
@@ -117,5 +215,15 @@
 	  
 	  </ul>
 		<p>Variables are fundamental to programming in JavaScript, allowing you to store, manipulate, and retrieve data efficiently.</p>
+	 <p>Variable are used to store informations</p>
+	 <p>there are three type of keywords</p>
+	 
+	 
+	 
+
+
+	 
+	 	
+	 </pre>
 </body>
 </html>
